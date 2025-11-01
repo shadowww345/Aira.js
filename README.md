@@ -1,2 +1,2 @@
 # Aira.js
-Aira is a small artificial intelligence library that is currently under development.
+Aira is a small artificial intelligence(AI) library that is currently under development.
