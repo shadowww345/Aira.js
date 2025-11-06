@@ -99,7 +99,8 @@ function normalizeVector(vector) {
 
 
 //Using lib//
-const testword = vectorize(Tokenizer("merhaba nasılsın iyi misin"))
+const testword =  normalizeVector(vectorize(Tokenizer("Hey Aira bugün napıyorsun")))
 const score = neuron.process(testword)
-console.log("score:",score,testword)
+console.log(neuron.process(score))
+console.log(testword)
 //Using lib//
