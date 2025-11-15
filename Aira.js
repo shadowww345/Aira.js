@@ -82,7 +82,7 @@ const activate = new Activation
 
 
 const vocab = {
-    //TR
+//TR
  selam:2,
   merhaba:2,
   nasılsın:1,
@@ -1087,5 +1087,6 @@ const score = neuron.process(testword)
 console.log(neuron.process(score))
 console.log(testword)
 //Using lib//
+
 
 
