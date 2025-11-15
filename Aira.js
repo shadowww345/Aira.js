@@ -1082,11 +1082,24 @@ function normalizeVector(vector) {
 
 
 //Using lib//
-const testword =  normalizeVector(vectorize(Tokenizer("Hey Aira bugün napıyorsun")))
-const score = neuron.process(testword)
-console.log(neuron.process(score))
-console.log(testword)
-//Using lib//
+//Variables//
 
+const sentence = "selam nasılsın"
+const testword =  normalizeVector(vectorize(Tokenizer(sentence)))
+const tokens = Tokenizer(sentence)
+const proc = console.log(layer[Math.floor(Math.random()*layer.length)].process(testword))
+
+//Variables//
+
+//Logs//
+
+console.log(tokens)
+console.log(layer[Math.floor(Math.random()*layer.length)])
+console.log(errorMeasurement([testword], [0, 1, 1]))
+console.log(testword)
+
+//Logs//
+
+//Using lib//
 
 
