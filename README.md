@@ -63,7 +63,7 @@ NeuralNetwork
 
 Gizli katman + tek bir çıktı nöronu içerir.
 
-const network = new NeuralNetwork(3, 10, 1);
+const network = new NeuralNetwork;
 
 const prediction = network.predict([0.1, 0.2, 0.3]);
 
