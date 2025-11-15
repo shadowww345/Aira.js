@@ -28,9 +28,11 @@ Kurulum
 Aira.js npm’de değildir. Bu yüzden:
 
 1 — Depoyu klonlayın
+
 git clone https://github.com/shadowww345/Aira.js
 
 2 — Dosyayı direkt projeye ekleyin
+
 <script src="Aira.js"></script>
 
 
@@ -53,7 +55,8 @@ Eğitim fonksiyonu içerir
 
 Kullanım:
 
-const neuron = new Neuron();
+const neuron = new Neuron()
+
 const output = neuron.process([0.2, 0.4, 0.6]);
 
 NeuralNetwork
@@ -61,6 +64,7 @@ NeuralNetwork
 Gizli katman + tek bir çıktı nöronu içerir.
 
 const network = new NeuralNetwork(3, 10, 1);
+
 const prediction = network.predict([0.1, 0.2, 0.3]);
 
 Tokenizer
@@ -68,6 +72,7 @@ Tokenizer
 Metni küçük harfe çevirir ve kelimelere böler:
 
 Tokenizer("Hey Aira bugün napıyorsun");
+
 // -> ["hey", "aira", "bugün", "napıyorsun"]
 
 Vectorize + Normalize
@@ -75,23 +80,28 @@ Vectorize + Normalize
 Önceden tanımlanmış bir kelime sözlüğü ile vektör oluşturur:
 
 vectorize(["hey", "napıyorsun"]);
+
 // -> [0, 2, 0]
 
 
 Normalize eder:
 
-normalizeVector([0, 2, 0]);
-// -> [0, 1, 0]
+normalizeVector([0, 1, 0]);
+
+// -> [0, 0.2, 0]
 
 Örnek Kullanım
+
 const testword = normalizeVector(
     vectorize(Tokenizer("Hey Aira bugün napıyorsun"))
 );
 
 const neuron = new Neuron();
+
 const score = neuron.process(testword);
 
 console.log(neuron.process(score));
+
 console.log(testword);
 
 Gelecek Planlar
@@ -105,6 +115,8 @@ Model kaydetme/yükleme
 Veri seti eğitimi
 
 Daha gelişmiş tokenizer
+
+Stable Diffusion
 
 Lisans
 
@@ -139,6 +151,7 @@ Installation
 Aira.js is not available on npm.
 
 1 — Clone the repository
+
 git clone https://github.com/shadowww345/Aira.js
 
 2 — Include the file
@@ -153,6 +166,7 @@ Node:
 require("./Aira.js");
 
 Code Structure
+
 Neuron
 
 Each neuron contains:
@@ -168,13 +182,15 @@ Train function
 Usage:
 
 const neuron = new Neuron();
+
 const output = neuron.process([0.2, 0.4, 0.6]);
 
 NeuralNetwork
 
 A simple network with one hidden layer and one output neuron.
 
-const network = new NeuralNetwork(3, 10, 1);
+const network = new NeuralNetwork;
+
 const prediction = network.predict([0.1, 0.2, 0.3]);
 
 Tokenizer
@@ -182,6 +198,7 @@ Tokenizer
 Lowercases the text and extracts words:
 
 Tokenizer("Hey Aira bugün napıyorsun");
+
 // -> ["hey", "aira", "bugün", "napıyorsun"]
 
 Vectorize + Normalize
@@ -189,23 +206,28 @@ Vectorize + Normalize
 Transforms tokens into a small numeric vector:
 
 vectorize(["hey", "napıyorsun"]);
+
 // -> [0, 2, 0]
 
 
 Normalizes the vector:
 
 normalizeVector([0, 2, 0]);
+
 // -> [0, 1, 0]
 
 Example Usage
+
 const testword = normalizeVector(
     vectorize(Tokenizer("Hey Aira bugün napıyorsun"))
 );
 
 const neuron = new Neuron();
+
 const score = neuron.process(testword);
 
 console.log(neuron.process(score));
+
 console.log(testword);
 
 Future Plans
